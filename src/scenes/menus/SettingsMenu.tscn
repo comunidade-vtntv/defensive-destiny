@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/settings_menu_handler.cs" type="Script" id=2]
+
+[sub_resource type="InputEventKey" id=1]
+pressed = true
+scancode = 16777217
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[node name="SettingsMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FullscreenButton" type="CheckButton" parent="."]
+margin_left = 30.0338
+margin_top = 65.0271
+margin_right = 212.034
+margin_bottom = 106.027
+text = "FullscreenMode"
+
+[node name="MainMenuButton" type="Button" parent="."]
+margin_right = 49.0
+margin_bottom = 45.0
+shortcut = SubResource( 2 )
+text = "<"
+
+[connection signal="toggled" from="FullscreenButton" to="." method="_on_FullscreenButton_toggled"]
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

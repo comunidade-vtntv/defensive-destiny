@@ -1,0 +1,18 @@
+# Import cache
+src/.import/
+
+# Binaries
+src/bin/
+src/build/
+src/lib/
+src/android/
+
+# Configurations
+src/export_presets.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+src/.mono/
+data_*/

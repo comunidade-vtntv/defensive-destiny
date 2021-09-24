@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="Defensive Destiny"
+run/main_scene="res://scenes/menus/MainMenu.tscn"
+run/disable_stdout=true
+run/disable_stderr=true
+run/flush_stdout_on_print.debug=false
+
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[gdnative]
+
+singletons=[  ]
+
+[locale]
+
+locale_filter=[ 0, [ "en", "es", "pt" ] ]
+translations=PoolStringArray( "res://translations/menus/main_menu.en.translation", "res://translations/menus/main_menu.es.translation", "res://translations/menus/main_menu.pt.translation", "res://translations/menus/settings_menu.en.translation", "res://translations/menus/settings_menu.es.translation", "res://translations/menus/settings_menu.pt.translation" )
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=false
